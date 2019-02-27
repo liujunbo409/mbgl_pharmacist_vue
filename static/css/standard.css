@@ -1,0 +1,170 @@
+/*
+ * 移动端视觉规范（公共样式）
+ *
+ * By Yuzibo  2018/11/12
+ *
+ */
+
+/* button */
+
+/* 主要按钮 --> 主要按钮*/
+.mainbtn-main{
+  text-align: center;
+  width: 90%;
+  height: 2.2rem;
+  color: #FFFFFF;
+  line-height: 2.2rem;
+  font-size: 1.0rem;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #03a9f4;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 主要按钮 --> 次要按钮*/
+.mainbtn-secondary {
+  text-align: center;
+  width: 90%;
+  height: 2.2rem;
+  color:#333333;
+  line-height: 2.2rem;
+  font-size: 1rem;
+  border: solid 1px;
+  border-color: #B3B3B3;
+  border-radius:5px;
+  background-color: #FFFFFF;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 主要按钮 --> 不可点击按钮*/
+.mainbtn-disabled {
+  text-align: center;
+  width: 90%;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  color:#B3B3B3;
+  font-size: 1rem;
+  border: 0px;
+  border-radius:5px;
+  background-color: #DFDFDF;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 一般按钮 --> 主要按钮*/
+.normalbtn-main{
+  text-align: center;
+  width:14%;
+  height:1.5rem;
+  line-height: 1.5rem;
+  border: 0px;
+  border-radius:4px;
+  color:#FFFFFF;
+  font-size: 0.65rem;
+  background-color: #03a9f4;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 一般按钮 --> 主要按钮(不可点击)*/
+.normalbtn-main-disabled{
+  text-align: center;
+  width:14%;
+  height:1.5rem;
+  line-height: 1.5rem;
+  border: solid 1px;
+  border-radius:4px;
+  border-color: #B3B3B3;
+  color:#B3B3B3;
+  font-size: 0.65rem;
+  background-color: #DFDFDF;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 一般按钮 --> 次要按钮*/
+.normalbtn-secondary{
+  text-align: center;
+  width:14%;
+  height:1.5rem;
+  line-height: 1.5rem;
+  border: solid 1px;
+  border-radius:4px;
+  border-color: #03a9f4;
+  color:#03a9f4;
+  font-size: 0.65rem;
+  background-color: #FFFFFF;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 一般按钮 --> 次要按钮(不可点击)*/
+.normalbtn-secondary-disabled{
+  text-align: center;
+  width:14%;
+  height:1.5rem;
+  line-height: 1.5rem;
+  border: solid 1px;
+  border-radius:4px;
+  border-color: #B3B3B3;
+  color:#B3B3B3;
+  font-size: 0.65rem;
+  background-color: #FFFFFF;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Toast的样式*/
+.toast{
+  width: 40%;
+  height: 120px;
+}
+/* 列表最后一列无border*/
+.lastli{
+  border: none;
+}
+
+header{
+  width: 100%;
+  background-color: #03a9f4;
+  height: 2.5rem;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 2.5rem;
+  font-size: 1rem;
+}
+.title{
+  margin-left: 0.5rem;
+  font-size:0.7rem;
+}
+.value{
+  margin-right: 0.5rem;
+  float: right;
+  color:#B3B3B3;
+  font-size:0.7rem;
+}
+.one{
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: solid 1px #B3B3B3;
+  background-color: #FFFFFF;
+}
+.smalltitle{
+  margin-top: 0.8rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  background-color: #03a9f4;
+  color:#FFFFFF;
+  font-size: 0.8rem;
+}
+.jianjie{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  max-width: 95%;
+  height: 6rem;
+  border: solid 1px #B3B3B3;
+  font-size: 0.7rem;
+}

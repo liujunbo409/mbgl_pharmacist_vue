@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import login from '../views/login/login'
-import register from '../views/login/register'
-import assessarticle from '../views/assessarticle/index'
-import assessarticledetail from '../views/assessarticle/detail'
+// import login from '../views/login/login'
+// import register from '../views/login/register'
+// import assessarticle from '../views/assessarticle/index'
+// import assessarticledetail from '../views/assessarticle/detail'
 Vue.use(Router)
 let routers = [
   {

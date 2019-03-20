@@ -29,8 +29,9 @@
 
     <div  style="float:left;margin-left:1rem;">文章来源：</div>
         <div class="mt-10" style="margin-left:10px;margin-bottom:4rem;" v-if="sourceflg">
-            <h4>
-                <span v-if="sourceinfo.source_type == 'J'">
+            <h4 v-if="sourceflg" v-for="(item, key) of sourceinfo" style="margin-left:0.6rem;margin-top:0.2rem">
+              <span>[{{item.sequence}}]{{item.source_text}}</span>
+                <!-- <span v-if="sourceinfo.source_type == 'J'">
                     <span v-if="sourceinfo.sequence != null">[{{sourceinfo.sequence}}]</span>
                     <span v-if="sourceinfo.source_author != null">[{{sourceinfo.source_author}}]</span>
                     <span v-if="sourceinfo.source_name != null">[{{sourceinfo.source_name}}]</span>
@@ -102,7 +103,7 @@
                     <span v-if="sourceinfo.published_press != null">[{{sourceinfo.published_press}}]</span>
                     <span v-if="sourceinfo.published_year != null">[{{sourceinfo.published_year}}]</span>
                     <span v-if="sourceinfo.source_page != null">[{{sourceinfo.source_page}}]</span>
-                </span>
+                </span> -->
             </h4>
         </div>
         <div v-if="shenhebtnflg" class="aui-tab" id="tab">
@@ -167,15 +168,17 @@
         //获取文章来源详情信息
         self.api.doc_getArticleSource({article_id : articleid}).then((res)=>{
           //self.common.consoledebug.log("sourceres :"  + JSON.stringify(res.data.ret));
-          if(res.data.ret.length == 0){
-            self.sourceflg = false;
-          }else{
-            if(res.data.ret[0].source_type == null){
-            self.sourceflg = false;
-          }
-          self.sourceinfo = res.data.ret[0];
+          // if(res.data.ret.length == 0){
+          //   self.sourceflg = false;
+          // }else{
+          //   if(res.data.ret[0].source_type == null){
+          //   self.sourceflg = false;
+          // }
+          // self.sourceinfo = res.data.ret[0];
+          // self.sourceflg = true;
+          // }
+          self.sourceinfo = res.data.ret;
           self.sourceflg = true;
-          }
           //self.common.consoledebug.log("sourceres :"  + JSON.stringify(self.sourceinfo));
         }).catch((err)=>{
           self.common.consoledebug.log("err :"  + JSON.stringify(err));

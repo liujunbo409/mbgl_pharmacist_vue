@@ -27,9 +27,6 @@
             <div>
               {{item.article.title}}
             </div>
-            <a class="aui-pull-right" >
-              <span style="color: #03a9f4;margin-right: 1.5rem;font-size:0.65rem">待审核</span>
-            </a>
           </div>
         </li>
         </ul>

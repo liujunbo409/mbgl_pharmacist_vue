@@ -5,7 +5,7 @@
         <span class="aui-iconfont aui-icon-left"></span>
       </a> -->
       <div class="aui-title">审核文章</div>
-      <!-- <a class="aui-pull-right" href="#/MBGL/doctor/index">
+      <!-- <a class="aui-pull-right" href=">
         <span class="aui-iconfont aui-icon-home"></span>
       </a> -->
     </header>

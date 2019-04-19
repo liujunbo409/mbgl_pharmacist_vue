@@ -5,7 +5,7 @@
         <span class="aui-iconfont aui-icon-left"></span>
       </a>
       <div class="aui-title">{{title}}</div>
-      <a class="aui-pull-right" href="#/">
+      <a class="aui-pull-right" @click="clickBack">
         <span class="aui-iconfont aui-icon-home"></span>
       </a>
     </header>

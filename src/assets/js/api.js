@@ -22,13 +22,13 @@ if( DEBUG_FLAG == 'true'){
 // axios 配置
 axios.defaults.retry = 4
 axios.defaults.retryDelay = 1000
-//axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
+// axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 axios.defaults.baseURL = base
 
-//request拦截器
+// request拦截器
 axios.interceptors.request.use((config) => {
-  //consoledebug.log("axios.interceptors.request config:" + JSON.stringify(config));   //调试用
+  // consoledebug.log("axios.interceptors.request config:" + JSON.stringify(config));   //调试用
   //统一配置user_id和token
   if (config.method == "get") {
 
@@ -115,6 +115,10 @@ export const yaoshi_getUtils = params => {
 export const yaoshi_doLogin = params => {
   return axios_ajax('api/pharmacist/login/login', params, 'POST', true);
 }
+//logOut
+export const yaoshi_logOut = params => {
+  return axios_ajax('api/pharmacist/login/logOut', params, 'POST', false);
+}
 //忘记密码
 export const doc_forgetPWD = params => {
   return axios_ajax('api/doctor/login/forgetPWD', params, 'POST', false);
@@ -124,22 +128,25 @@ export const yaoshi_doSendMessageToOldPhone = params => {
   return axios_ajax('api/pharmacist/login/validateOldPhonenum', params, 'GET', true);
 }
 
-//审核文章列表
-export const yaoshi_getArticleList = params => {
-  return axios_ajax('api/pharmacist/article/test/articleList', params, 'GET', true);
-}
 // //审核文章列表
 // export const yaoshi_getArticleList = params => {
-//   return axios_ajax('api/pharmacist/article/shenhe/articleList', params, 'GET', true);
+//   return axios_ajax('api/pharmacist/article/test/articleList', params, 'GET', true);
 // }
+
+//审核文章列表
+export const yaoshi_getArticleList = params => {
+  return axios_ajax('api/pharmacist/article/shenhe/articleList', params, 'GET', true);
+}
+
+// //审核文章
+// export const yaoshi_doArticleShenhe = params => {
+//   return axios_ajax('api/pharmacist/article/test/shenhe', params, 'POST', false);
+// }
+
 //审核文章
 export const yaoshi_doArticleShenhe = params => {
-  return axios_ajax('api/pharmacist/article/test/shenhe', params, 'POST', false);
+  return axios_ajax('api/pharmacist/article/shenhe/shenhe', params, 'POST', false);
 }
-//审核文章
-// export const yaoshi_doArticleShenhe = params => {
-//   return axios_ajax('api/pharmacist/article/shenhe/shenhe', params, 'POST', false);
-// }
 //审核文章详情
 export const doc_getSHArticle = params => {
   return axios_ajax('api/doctor/article/shenhe/article', params, 'GET', false);
@@ -159,6 +166,7 @@ export default{
   doc_getSHArticle,
   doc_getArticleSource,
   yaoshi_doArticleShenhe,
+  yaoshi_logOut,
   yaoshi_doSendMessageToOldPhone,
 }
 
